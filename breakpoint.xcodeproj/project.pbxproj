@@ -15,6 +15,7 @@
 		E9D0F46D2204A2A4006D4F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F46C2204A2A4006D4F59 /* Assets.xcassets */; };
 		E9D0F4702204A2A4006D4F59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F46E2204A2A4006D4F59 /* LaunchScreen.storyboard */; };
 		E9D0F47D2204A671006D4F59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9D0F47C2204A670006D4F59 /* GoogleService-Info.plist */; };
+		E9D0F47F2204C034006D4F59 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0F47E2204C034006D4F59 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E9D0F46F2204A2A4006D4F59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9D0F4712204A2A4006D4F59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9D0F47C2204A670006D4F59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9D0F47E2204C034006D4F59 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		E9D0F47B2204A4B7006D4F59 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E9D0F47E2204C034006D4F59 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D0F47F2204C034006D4F59 /* DataService.swift in Sources */,
 				E9D0F4682204A2A1006D4F59 /* SecondViewController.swift in Sources */,
 				E9D0F4642204A2A1006D4F59 /* AppDelegate.swift in Sources */,
 				E9D0F4662204A2A1006D4F59 /* FirstViewController.swift in Sources */,
