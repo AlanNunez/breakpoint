@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/cocoadev/Documents/breakpoint/breakpoint/Services/AuthService.swift">
+   </FileRef>
+   <FileRef
       location = "group:breakpoint.xcodeproj">
    </FileRef>
    <FileRef
