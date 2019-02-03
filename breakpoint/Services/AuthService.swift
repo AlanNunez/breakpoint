@@ -15,7 +15,7 @@ class AuthService {
     func registerUser(withEmail email: String, andPassword password: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard let user = user else {
-               return userCreationComplete(false, error)
+                return userCreationComplete(false, error)
             }
             
             let userData = ["provider": user.user.providerID, "email": user.user.email]
@@ -26,11 +26,11 @@ class AuthService {
     
     func loginUser(withEmail email: String, andPassword password: String, loginComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            guard let user = user else {
+            if error != nil {
                 loginComplete(false, error)
-                return
+            } else {
+                loginComplete(true, nil)
             }
-            loginComplete(true, nil)
         }
     }
 }
