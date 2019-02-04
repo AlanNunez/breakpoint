@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
             window?.rootViewController?.present(authVC, animated: true, completion: nil)
         }
+        
         return true
     }
 
@@ -50,4 +51,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
+
 

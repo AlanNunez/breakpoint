@@ -40,4 +40,12 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData) { ( error : Error?, ref : DatabaseReference ) in if let error = error { print ( "Data could not be saved: \(error)." ) } else { print ( " Data saved successfully! " ) } }
     }
+    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
+        if groupKey != nil {
+            
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }
+    }
 }
