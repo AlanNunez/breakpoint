@@ -9,7 +9,8 @@
 import Foundation
 import Firebase
 
-let DB_BASE = Database.database().reference()
+
+var DB_BASE: DatabaseReference  = Database.database().reference()
 
 class DataService {
     
@@ -20,9 +21,14 @@ class DataService {
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_FEED = DB_BASE.child("feed")
     
+    var REF_BASE: DatabaseReference {
+        return _REF_BASE
+    }
+    
     var REF_USERS: DatabaseReference   {
          return  _REF_USERS
     }
+    
     var REF_GROUPS: DatabaseReference   {
         return  _REF_GROUPS
     }
@@ -32,6 +38,6 @@ class DataService {
     }
     
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
-        REF_USERS.child(uid).updateChildValues(userData)
+        REF_USERS.child(uid).updateChildValues(userData) { ( error : Error?, ref : DatabaseReference ) in if let error = error { print ( "Data could not be saved: \(error)." ) } else { print ( " Data saved successfully! " ) } }
     }
 }

@@ -23,18 +23,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>breakpoint-72fee.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:642702176724:ios:e63046cbab4f8d23</string>
 	<key>DATABASE_URL</key>
-	<string>https://breakpoint-72fee.firebaseio.com</string>
+	<string>https://breakpoint-72fee.firebaseio.com/</string>
 </dict>
 </plist>

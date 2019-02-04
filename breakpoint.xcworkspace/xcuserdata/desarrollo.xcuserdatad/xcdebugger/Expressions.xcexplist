@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in AuthService.registerUser(withEmail:andPassword:userCreationComplete:):AuthService.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(__NSCFString *)user._user-&gt;_userID">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
