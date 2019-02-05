@@ -15,6 +15,7 @@
 		9978B4963FD2E43EEB0DDF0F /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239557B0D2E84976E6589BA /* Pods_breakpoint.framework */; };
 		E97D64FD2209BE7C00AD8F7A /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D64FC2209BE7C00AD8F7A /* UIViewExt.swift */; };
 		E97D64FF2209E61400AD8F7A /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D64FE2209E61400AD8F7A /* FeedCell.swift */; };
+		E97D65012209E95600AD8F7A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D65002209E95600AD8F7A /* Message.swift */; };
 		E99E9D362208A5BC00B618D6 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E9D352208A5BC00B618D6 /* MeVC.swift */; };
 		E99E9D382208CA2400B618D6 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E9D372208CA2400B618D6 /* CreatePostVC.swift */; };
 		E9D0F4642204A2A1006D4F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D0F4632204A2A1006D4F59 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 		AAB0487C6E60571B4567D9B7 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		E97D64FC2209BE7C00AD8F7A /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewExt.swift; path = breakpoint/Controller/UIViewExt.swift; sourceTree = SOURCE_ROOT; };
 		E97D64FE2209E61400AD8F7A /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = breakpoint/Controller/FeedCell.swift; sourceTree = SOURCE_ROOT; };
+		E97D65002209E95600AD8F7A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = breakpoint/Controller/Message.swift; sourceTree = SOURCE_ROOT; };
 		E99E9D352208A5BC00B618D6 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		E99E9D372208CA2400B618D6 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		E9D0F4602204A2A1006D4F59 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 		6328CD8E22051A750038ECAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E97D65002209E95600AD8F7A /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				6328CD9B2206642E0038ECAC /* AuthService.swift in Sources */,
 				6328CD9522051C7F0038ECAC /* InsetTextField.swift in Sources */,
 				E9D0F4662204A2A1006D4F59 /* FeedVC.swift in Sources */,
+				E97D65012209E95600AD8F7A /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
