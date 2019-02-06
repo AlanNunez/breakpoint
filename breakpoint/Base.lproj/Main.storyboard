@@ -286,6 +286,9 @@
                                             <constraint firstAttribute="height" constant="25" id="ZG4-OV-950"/>
                                         </constraints>
                                         <state key="normal" image="addNewIcon"/>
+                                        <connections>
+                                            <segue destination="EUB-fw-wo8" kind="presentation" id="V71-fF-9EG"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1b-cP-oot">
                                         <rect key="frame" x="177.5" y="22.5" width="59.5" height="25"/>
@@ -425,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="1113.1934032983509"/>
         </scene>
-        <!--View Controller-->
+        <!--Create GroupVC-->
         <scene sceneID="8EB-oT-Yz8">
             <objects>
-                <viewController id="EUB-fw-wo8" sceneMemberID="viewController">
+                <viewController id="EUB-fw-wo8" customClass="CreateGroupVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IM2-gA-yxV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -449,6 +452,9 @@
                                             <constraint firstAttribute="width" constant="15" id="hU3-O5-6Tq"/>
                                         </constraints>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBtnWasPressed:" destination="EUB-fw-wo8" eventType="touchUpInside" id="AT3-i8-XWm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJF-cA-RHl">
                                         <rect key="frame" x="348" y="18.5" width="46" height="33"/>
@@ -461,6 +467,7 @@
                                             <color key="titleColor" red="0.2666666667" green="0.71764705880000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="doneBtwnWasPressed:" destination="EUB-fw-wo8" eventType="touchUpInside" id="YEP-aZ-A1o"/>
                                             <action selector="signOutBtnWasPressed:" destination="Jue-6J-8Hs" eventType="touchUpInside" id="BBU-tX-tPU"/>
                                         </connections>
                                     </button>
@@ -495,6 +502,9 @@
                                         <color key="textColor" red="0.2666666667" green="0.71764705880000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="titleTextField:" destination="S1p-PX-3EQ" eventType="editingDidEnd" id="hjD-xe-AQK"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQQ-ZU-gNY">
                                         <rect key="frame" x="0.0" y="72" width="374" height="20.5"/>
@@ -528,7 +538,7 @@
                                     </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WB9-JV-MEj">
                                         <rect key="frame" x="0.0" y="234.5" width="374" height="473.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -545,10 +555,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H2o-Ps-Bh0"/>
                     </view>
+                    <connections>
+                        <outlet property="doneBTn" destination="hJF-cA-RHl" id="DUs-5r-W6S"/>
+                        <outlet property="emailTextField" destination="pC4-H8-KUM" id="P1f-H9-gWh"/>
+                        <outlet property="groupMemberLbl" destination="QsK-Bh-rjz" id="rya-hd-3mf"/>
+                        <outlet property="groupTextField" destination="YmN-AG-yEx" id="kH9-SR-0vt"/>
+                        <outlet property="tableView" destination="WB9-JV-MEj" id="nQT-15-Nff"/>
+                        <outlet property="titleTextField" destination="Hlh-cJ-aeO" id="6Re-gc-wM4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMF-e6-Vdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="S1p-PX-3EQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="1115.625"/>
+            <point key="canvasLocation" x="1530" y="370"/>
         </scene>
         <!--AuthVC-->
         <scene sceneID="ok4-Np-nIm">
