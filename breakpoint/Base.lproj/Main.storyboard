@@ -265,14 +265,51 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Odv-4q-BBy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="100" id="Odv-4q-BBy" customClass="GroupCell" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Odv-4q-BBy" id="ihK-T0-Uhn">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grouping Title: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-ip-M7Y">
+                                                    <rect key="frame" x="8" y="8" width="398" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.0078431372550000003" green="0.63137254899999995" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Group Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krx-ky-2tp">
+                                                    <rect key="frame" x="8" y="35.5" width="398" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.0078431372550000003" green="0.63137254899999995" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Members:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50h-vu-bny">
+                                                    <rect key="frame" x="8" y="67.5" width="398" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.0078431372550000003" green="0.63137254899999995" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Krx-ky-2tp" firstAttribute="leading" secondItem="ihK-T0-Uhn" secondAttribute="leading" constant="8" id="1lp-Zy-5QX"/>
+                                                <constraint firstItem="Krx-ky-2tp" firstAttribute="top" secondItem="yJe-ip-M7Y" secondAttribute="bottom" constant="8" id="7v7-sR-sQQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="50h-vu-bny" secondAttribute="trailing" constant="8" id="AKf-14-PLp"/>
+                                                <constraint firstItem="50h-vu-bny" firstAttribute="top" secondItem="Krx-ky-2tp" secondAttribute="bottom" constant="8" id="EHx-Yh-jhp"/>
+                                                <constraint firstItem="yJe-ip-M7Y" firstAttribute="top" secondItem="ihK-T0-Uhn" secondAttribute="top" constant="8" id="GJV-Nm-kH0"/>
+                                                <constraint firstItem="50h-vu-bny" firstAttribute="leading" secondItem="ihK-T0-Uhn" secondAttribute="leading" constant="8" id="HiX-Is-4Sh"/>
+                                                <constraint firstAttribute="bottom" secondItem="50h-vu-bny" secondAttribute="bottom" constant="8" id="VKy-U1-CXh"/>
+                                                <constraint firstItem="yJe-ip-M7Y" firstAttribute="leading" secondItem="ihK-T0-Uhn" secondAttribute="leading" constant="8" id="bsY-gK-jF6"/>
+                                                <constraint firstAttribute="trailing" secondItem="Krx-ky-2tp" secondAttribute="trailing" constant="8" id="eU9-gQ-i4v"/>
+                                                <constraint firstAttribute="trailing" secondItem="yJe-ip-M7Y" secondAttribute="trailing" constant="8" id="l13-H9-KpB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="groupDescLbl" destination="Krx-ky-2tp" id="Xe3-Dt-mV2"/>
+                                            <outlet property="groupTitleLbl" destination="yJe-ip-M7Y" id="hce-p9-6l6"/>
+                                            <outlet property="memberCountLbl" destination="50h-vu-bny" id="m2K-Xq-jlP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -320,6 +357,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Group" image="groups-tabIcon" selectedImage="groups-tabIcon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="groupsTableView" destination="Quq-qc-Dyl" id="4mS-b8-e62"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
