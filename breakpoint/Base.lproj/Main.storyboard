@@ -501,7 +501,7 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="100" id="AxF-0b-BUb" customClass="GroupFeedCell" customModule="breakpoint" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupFeedCell" rowHeight="100" id="AxF-0b-BUb" customClass="GroupFeedCell" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AxF-0b-BUb" id="uaX-fD-e0C">
@@ -624,6 +624,7 @@
                         <outlet property="groupTitleLbl" destination="q0a-dc-Vwd" id="5n7-c9-6lg"/>
                         <outlet property="membersLbl" destination="nHH-rx-bit" id="jUu-Wm-QM0"/>
                         <outlet property="messageTextField" destination="kcZ-b6-rFh" id="Fqo-nA-JxJ"/>
+                        <outlet property="sendBtn" destination="7pt-lF-sG7" id="pZr-7C-nlp"/>
                         <outlet property="sendBtnView" destination="45O-LP-5RT" id="RPq-Oq-1NM"/>
                         <outlet property="tableView" destination="uYR-Qe-13t" id="8xV-Zi-uAT"/>
                     </connections>

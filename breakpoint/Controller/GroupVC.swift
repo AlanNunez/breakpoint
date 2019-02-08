@@ -8,10 +8,6 @@
 
 import UIKit
 
-/// Test documentation method
-///
-/// - Parameter string: The input string
-/// - Returns: The output bool
 class GroupVC: UIViewController {
     
     @IBOutlet weak var groupsTableView: UITableView!
