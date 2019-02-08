@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// - Description: Handle the groups
+
 class GroupFeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -16,10 +18,25 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var messageTextField: InsetTextField!
     @IBOutlet weak var sendBtnView: UIView!
     
+    var group: Group?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sendBtnView.bindToKeyboard()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        groupTitleLbl.text = group?.groupTitle
+        DataService.instance.getEmailsFor(group: group!) { (returnedEmails) in
+           self.membersLbl.text = returnedEmails.joined(separator: ", ")
+        }
+    }
+    
+    func initData(forGroup group: Group) {
+        self.group = group
+    }
+    
     @IBAction func sendBtnWasPressed(_ sender: Any) {
     }
     
