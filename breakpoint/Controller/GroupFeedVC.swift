@@ -25,9 +25,9 @@ class GroupFeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         sendBtnView.bindToKeyboard()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +36,7 @@ class GroupFeedVC: UIViewController {
         DataService.instance.getEmailsFor(group: group!) { (returnedEmails) in
             self.membersLbl.text = returnedEmails.joined(separator: ", ")
         }
-        DataService.instance.REF_GROUPS.observe(.value) { (snapashot)  in
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot)  in
             DataService.instance.getAllMessagesFor(desiredGroup: self.group! , handler: { (returnedGroupMessages) in
                 self.groupMessages = returnedGroupMessages
                 self.tableView.reloadData()
@@ -47,7 +47,6 @@ class GroupFeedVC: UIViewController {
             })
         }
     }
-    
     func initData(forGroup group: Group) {
         self.group = group
     }
@@ -68,7 +67,7 @@ class GroupFeedVC: UIViewController {
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
 }
 
@@ -83,7 +82,7 @@ extension GroupFeedVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell") as? GroupFeedCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell", for: indexPath) as? GroupFeedCell else {
             return UITableViewCell()
         }
         let message = groupMessages[indexPath.row]
