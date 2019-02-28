@@ -16,6 +16,8 @@
 		9978B4963FD2E43EEB0DDF0F /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239557B0D2E84976E6589BA /* Pods_breakpoint.framework */; };
 		E934A595220CA8AE00939630 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934A594220CA8AE00939630 /* GroupCell.swift */; };
 		E934A597220CB1C700939630 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934A596220CB1C700939630 /* Group.swift */; };
+		E97637EC2228A905006D461A /* Links in Resources */ = {isa = PBXBuildFile; fileRef = E97637EB2228A905006D461A /* Links */; };
+		E97637EE2228A943006D461A /* iOS_roadmap_2018.png in Resources */ = {isa = PBXBuildFile; fileRef = E97637ED2228A942006D461A /* iOS_roadmap_2018.png */; };
 		E976C82D220DBC1B0027765F /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976C82C220DBC1B0027765F /* GroupFeedCell.swift */; };
 		E976C82F220DBCE60027765F /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976C82E220DBCE60027765F /* GroupFeedVC.swift */; };
 		E97789A0220B44EE007565A7 /* CreateGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977899F220B44EE007565A7 /* CreateGroupVC.swift */; };
@@ -47,6 +49,8 @@
 		AAB0487C6E60571B4567D9B7 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		E934A594220CA8AE00939630 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupCell.swift; path = breakpoint/View/GroupCell.swift; sourceTree = SOURCE_ROOT; };
 		E934A596220CB1C700939630 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Group.swift; path = breakpoint/Model/Group.swift; sourceTree = SOURCE_ROOT; };
+		E97637EB2228A905006D461A /* Links */ = {isa = PBXFileReference; lastKnownFileType = text; path = Links; sourceTree = "<group>"; };
+		E97637ED2228A942006D461A /* iOS_roadmap_2018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS_roadmap_2018.png; sourceTree = "<group>"; };
 		E976C82C220DBC1B0027765F /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
 		E976C82E220DBCE60027765F /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		E977899F220B44EE007565A7 /* CreateGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupVC.swift; sourceTree = "<group>"; };
@@ -143,9 +147,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E97637EA2228A8D7006D461A /* Learning Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E97637ED2228A942006D461A /* iOS_roadmap_2018.png */,
+				E97637EB2228A905006D461A /* Links */,
+			);
+			path = "Learning Resources";
+			sourceTree = "<group>";
+		};
 		E9D0F4572204A2A1006D4F59 = {
 			isa = PBXGroup;
 			children = (
+				E97637EA2228A8D7006D461A /* Learning Resources */,
 				E9D0F4622204A2A1006D4F59 /* breakpoint */,
 				E9D0F4612204A2A1006D4F59 /* Products */,
 				72FAACB637EF50A1EAA6F547 /* Pods */,
@@ -248,10 +262,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97637EC2228A905006D461A /* Links in Resources */,
 				E9D0F4702204A2A4006D4F59 /* LaunchScreen.storyboard in Resources */,
 				E9D0F47D2204A671006D4F59 /* GoogleService-Info.plist in Resources */,
 				E9D0F46D2204A2A4006D4F59 /* Assets.xcassets in Resources */,
 				E9D0F46B2204A2A1006D4F59 /* Main.storyboard in Resources */,
+				E97637EE2228A943006D461A /* iOS_roadmap_2018.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
